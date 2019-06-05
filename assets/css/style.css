@@ -1,0 +1,43 @@
+body {
+    background-image:url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width:980px;
+    margin:0 auto;
+}
+
+.logoDiv {
+    width:700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
+    height:100px;
+    margin: 0 auto;
+}
+
+.answerOptions:hover {
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color:red;
+    border: 2px solid black;
+}
+
+#answerScreen {
+    display: none;
+}
+
+#mainContent {
+    width: 100%;
+    height: 550px;
+    background-color:#ffffff7a;
+    border-radius: 10px;
+    text-align:center;
+}
