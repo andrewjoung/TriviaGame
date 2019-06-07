@@ -3,8 +3,22 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Merriweather', serif;
 }
 
+h1, h2 {
+    font-weight: 300;
+}
+
+button {
+    padding: 12px;
+    width: 150px;
+    border: none;
+    background-color: #b63535;
+    font-size: 15px;
+    color: white;
+    box-shadow: 4px 4px 5px #00000052;
+}
 .container {
     width:980px;
     margin:0 auto;
@@ -26,8 +40,7 @@ body {
     width: 70%;
     padding: 10px;
     margin: 0 auto;
-    background-color:red;
-    border: 2px solid black;
+    background-color:#b63535;
 }
 
 #answerScreen {
@@ -36,12 +49,17 @@ body {
 
 #mainContent {
     width: 100%;
-    height: 550px;
+    height: 500px;
     background-color:#ffffff7a;
     border-radius: 10px;
     text-align:center;
+    padding-top:50px;
 }
 
 #timerText {
     display:none;
+}
+
+#timer {
+    color:#b63535;
 }

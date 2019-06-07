@@ -1,13 +1,8 @@
-//TODO:
-//fix timer display so that when time out it goes back to 10
-
 //Author: Andrew Joung
 //June 6th, 2019
 //This is a JavaScript file that adds functionality to the Trivia Game. 
 //The code uses the jQuery library to dynamically manipulate the DOM to allow
 //the user to see questions and answers to play a timed trivia game.
-
-
 
 $(document).ready(function() {
 
@@ -214,6 +209,7 @@ $(document).ready(function() {
         $("#answerScreen").css("display", "block");
         var answerHeading = $("<h1>");
         answerHeading.text("you ran out of time!");
+        answerHeading.css("color", "#b63535");
         $("#answerScreen").append(answerHeading);
         setTimeout(function(){
            resetScreen();
