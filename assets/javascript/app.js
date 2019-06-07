@@ -1,12 +1,11 @@
 //TODO:
-//adjust the timer
-// ======> we want it to display once the start button is pressed (manipulate the mainScreen div)
-//      =====> have mainScreen not display and then display once start is pressed 
-// ======> stop once the game is ended
-// ======> have it display "Time Remaining: <time> seconds"
-//write code to make game stop once all questions are done iterating
-//display number correct and reset the game once all questions are answered 
-//manually reset the page
+//fix timer display so that when time out it goes back to 10
+
+//Author: Andrew Joung
+//June 6th, 2019
+//This is a JavaScript file that adds functionality to the Trivia Game. 
+//The code uses the jQuery library to dynamically manipulate the DOM to allow
+//the user to see questions and answers to play a timed trivia game.
 
 
 
@@ -94,6 +93,7 @@ $(document).ready(function() {
             
             //initalize the timer when the game starts
             $("#timerText").css("display", "block");
+            $("#timer").text("10");
             initalizeTimer();
 
             //get the currentQuestion based on which question we are at 
@@ -132,7 +132,6 @@ $(document).ready(function() {
 
                 clearInterval(interval); //clear the timer 
 
-                $("#timer").text("10"); //reset the text in the timer
                 $("#timerText").css("display", "none"); //hide the timer
                 $("#questionScreen").css("display", "none"); //hide the question screen
                 $("#answerScreen").css("display", "block"); //then we display the div with id answerScreen where we will show the user the correct answer
@@ -210,6 +209,7 @@ $(document).ready(function() {
     //used to show text to notify the user they have ran out of time 
     //waits three seconds before moving onto the next question
     function timesUp() {
+        numIncorrect++;
         $("#questionScreen").css("display", "none");
         $("#answerScreen").css("display", "block");
         var answerHeading = $("<h1>");
