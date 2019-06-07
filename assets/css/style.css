@@ -41,3 +41,7 @@ body {
     border-radius: 10px;
     text-align:center;
 }
+
+#timerText {
+    display:none;
+}
